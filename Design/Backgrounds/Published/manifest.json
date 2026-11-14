@@ -1,0 +1,62 @@
+{
+  "revision": 2,
+  "catalog": {
+    "schemaVersion": 1,
+    "scenes": [
+      {
+        "id": "chile-grassland",
+        "title": "穹庐草原",
+        "dayAsset": "chile-grassland-day.webp",
+        "nightAsset": "chile-grassland-day.webp",
+        "fixedAppearance": "day",
+        "status": "approved",
+        "reviewedOn": "2026-11-13",
+        "automaticMatching": {
+          "imagery": [
+            "草原",
+            "牛羊"
+          ],
+          "keywords": [
+            "敕勒",
+            "阴山",
+            "牛羊",
+            "野茫茫"
+          ],
+          "seasons": [],
+          "tones": [
+            "开阔"
+          ],
+          "requiredTerms": [
+            "敕勒",
+            "阴山",
+            "牛羊"
+          ]
+        }
+      }
+    ],
+    "mappings": [
+      {
+        "poemID": "北朝-民歌-敕勒歌",
+        "excerpt": [
+          "天苍苍，野茫茫",
+          "风吹草低见牛羊"
+        ],
+        "revision": 1,
+        "preferred": [
+          "chile-grassland"
+        ],
+        "compatible": [],
+        "basis": "阴山脚下的旷野、高草与北方牛羊对应本篇景象；全天使用昼景。",
+        "status": "approved",
+        "reviewedOn": "2026-11-13"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "name": "chile-grassland-day.webp",
+      "bytes": 393034,
+      "sha256": "448a6925cdd489ff35e1f105580e8430aa3eba0d9aedd70912227e02407d2d87"
+    }
+  ]
+}
