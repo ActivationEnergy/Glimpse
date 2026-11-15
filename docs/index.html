@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>一瞥 · Glimpse — 给闲暇，留一点诗意</title>
-<meta name="description" content="一瞥，Mac 上的诗词阅读与屏保。离线阅读，以诗配画。">
+<title>一瞥 · 清荷诗笺</title>
+<meta name="description" content="一瞥，Mac 上的诗词阅读与诗画屏保。也可选择在解锁后停留片刻，离线阅读，以诗配画。">
 <meta name="theme-color" content="#f7f8f4">
 <link rel="stylesheet" href="designs/v4.css?v=review-1">
 <link rel="stylesheet" href="poetry-type.css?v=kai-local-2">
-<link rel="stylesheet" href="designs/paper-selected.css?v=9">
+<link rel="stylesheet" href="designs/paper-selected.css?v=11">
 </head>
 <body class="paper">
 <a class="skip" href="#main">跳到正文</a>
@@ -26,9 +26,10 @@
 <div class="hero-intro">
 <h1>浮生一瞥</h1>
 <p class="promise">给闲暇，<br>留一点诗意</p>
-<p class="description">电脑闲置时，以诗画作屏保。<br>想读时，也可以打开一瞥</p>
+<p class="description">闲置时作屏保，或解锁后停留片刻。<br>想读时，打开一瞥</p>
+<p class="release-note">1.1.0 公开测试版 · 屏保与解锁展示二选一</p>
 <div class="actions">
-<a class="button" href="https://github.com/ActivationEnergy/Glimpse/raw/refs/tags/v1.0.1/Releases/v1.0.1/Glimpse-1.0.1-macOS-universal.dmg">下载 Mac 版</a>
+<a class="button" href="https://github.com/ActivationEnergy/Glimpse/raw/refs/tags/v1.1.0/Releases/v1.1.0/Glimpse-1.1.0-macOS-universal.dmg">下载 Mac 版</a>
 <a href="#guide" class="quiet-link">安装与使用</a>
 </div>
 </div>
@@ -47,7 +48,7 @@
 <article class="story-row screen-story">
 <div class="story-copy">
 <h2>屏幕闲下来，<br>诗意便有了位置</h2>
-<p>电脑闲置时，屏保显示诗词和配画。<br>解锁后直接回到工作界面。</p>
+<p>习惯用屏保，就让诗画在闲置时出现。<br>更习惯直接息屏，也可以选择在解锁后看一眼，约 3 秒便收起。两种方式，只选一种。</p>
 </div>
 <figure class="painting pine" translate="no">
 <img src="assets/pine-stream-day.webp" alt="日光下的松树、山石与清泉" width="1586" height="992" loading="lazy">
@@ -129,53 +130,116 @@
 </section>
 <section class="guide content" id="guide">
 <h2>安装与设置</h2>
+<p class="guide-intro">先选一种适合自己的相遇方式，再完成对应设置。两种自动展示方式互斥；只想读诗，也可以全部关闭。</p>
+<div class="mode-comparison">
+<table>
+<caption>三种使用方式</caption>
+<thead><tr><th scope="col">方式</th><th scope="col">什么时候显示</th><th scope="col">需要 App 运行吗</th></tr></thead>
+<tbody>
+<tr><th scope="row">屏保</th><td>电脑闲置时，由 macOS 启动</td><td>不需要</td></tr>
+<tr><th scope="row">解锁后一瞥</th><td>离开达到所选时长，解锁后约 3 秒</td><td>需要，可关闭阅读窗口</td></tr>
+<tr><th scope="row">不自动显示</th><td>只在主动阅读或手动预览时显示</td><td>使用时打开即可</td></tr>
+</tbody>
+</table>
+</div>
 <ol>
 <li>
 <h3 id="download">安装一瞥</h3>
-<p class="install-summary">免费，适用于 macOS&nbsp;14 及以上。Apple&nbsp;Silicon 与 Intel 通用安装包。以下两种安装方式，任选一种即可。</p>
-<p>当前为 1.0.1 公开测试版，尚未完成 Apple 公证。</p>
+<p class="install-summary">免费，适用于 macOS&nbsp;14 及以上。Apple&nbsp;Silicon 与 Intel 通用安装包。以下两种安装方式任选一种。</p>
+<p>当前为 1.1.0 公开测试版，采用临时签名，尚未完成 Apple 公证。安装包和 Homebrew 使用同一版本；Homebrew 不会绕过 macOS 的安全检查。</p>
 <div class="install-options">
 <div>
 <h4>下载安装包</h4>
-<a class="button" href="https://github.com/ActivationEnergy/Glimpse/raw/refs/tags/v1.0.1/Releases/v1.0.1/Glimpse-1.0.1-macOS-universal.dmg">下载 Mac 安装包</a>
-<p>下载并打开安装包，将 App 拖入“应用程序”后打开。</p>
+<a class="button" href="https://github.com/ActivationEnergy/Glimpse/raw/refs/tags/v1.1.0/Releases/v1.1.0/Glimpse-1.1.0-macOS-universal.dmg">下载 Mac 安装包</a>
+<p>下载并打开 DMG，将 Glimpse.app 拖入“应用程序”，再从“应用程序”打开。不要一直从安装包内运行。</p>
 </div>
 <div class="brew">
 <h4>或使用 Homebrew</h4>
 <code translate="no">brew install --cask activationenergy/tap/glimpse</code>
-<p>在终端运行命令，安装后打开一瞥。</p>
+<p>在终端运行命令，安装后打开一瞥。Homebrew 只管理主 App；使用屏保时，还要在 App 中另行安装屏保。</p>
 </div>
 </div>
-<p>任选一种方式安装主 App，再按下面的步骤启用屏保。</p>
+<p>首次引导可以跳过，先读诗词。之后打开“一瞥 → 设置”（⌘,），左侧有“展示方式”“阅读与配景”“安装与帮助”三栏。</p>
 </li>
 <li>
-<h3>启用屏保</h3>
-<p>按 App 的引导安装屏保，再到系统设置中选择“一瞥诗词”。只想阅读，可以跳过这一步。</p>
+<h3 id="presentation">选择诗笺出现的时机</h3>
+<div class="display-options">
+<article>
+<h4>闲置时，作为屏保</h4>
+<p>适合平时会使用屏保的用户。在“展示方式”选中这一项，点击“安装／更新屏保”，完成 macOS 的安装流程。</p>
+<p>到系统设置选择“一瞥诗词”，先用系统预览检查。再把屏保启动时间设在显示器关闭之前，等待一次真实闲置启动；App 内的“全屏预览诗笺”不能代替系统屏保检查。</p>
+<p>屏保运行时每屏约两分钟换一篇，多屏首次换诗会错峰。退出 App 后仍可运行。解锁后直接回到工作界面，不再追加解锁诗笺。</p>
+</article>
+<article>
+<h4>解锁后，停留片刻</h4>
+<p>适合不习惯用屏保，或显示器总是先关闭的用户。在“展示方式”选中这一项；若显示“待完成设置”，点击“打开系统设置”，把一瞥屏保改成其他屏保。</p>
+<p>返回一瞥，点击“重新检查”。只有确认系统已停用一瞥屏保，状态变为“已就绪”后才会生效。App 不会代替你修改系统屏保；无法确认时暂停解锁展示，避免屏保和解锁连续出现。</p>
+<p>“至少离开多久才显示”默认 2 分钟，可改为 5、10、30 分钟或 1 小时。短暂锁一下屏不必再看一次；刚打开 App、开机登录、切换窗口或仅点亮未锁定的屏幕都不会触发。</p>
+<p>需要让一瞥在锁屏前已运行。关闭阅读窗口后仍可展示，退出 App 后暂停；可按需开启“登录后自动运行一瞥”。如果 macOS 要求批准，到系统设置的“登录项”允许后再返回检查。</p>
+</article>
+</div>
+<p><strong>只想主动阅读：</strong>选择“不自动显示”，仍可随时阅读和手动预览。如果 macOS 仍选着“一瞥诗词”，系统屏保还会独立运行，须到系统设置改用其他屏保；App 内的单选项不能替代这一步。不再需要后台运行时，也可关闭登录后自动运行。</p>
+<div class="settings-location" id="system-settings">
+<h4>不同 Mac 的系统设置入口</h4>
+<p>入口取决于 macOS 版本，而不是简单按 Intel 或 Apple Silicon 区分：</p>
+<p>macOS 14／15：系统设置 → 屏幕保护程序。macOS 26 及以后：系统设置 → 墙纸 → 屏幕保护程序。找不到时，在系统设置中搜索“屏幕保护程序”。屏保启动与显示器关闭的时间在“锁屏”中调整；密码和息屏要求始终由你和 macOS 决定。</p>
+</div>
 </li>
 <li>
-<h3>设置屏保时间</h3>
-<p>先在系统设置中预览，再试一次闲置启动。把屏保启动时间设在显示器关闭之前；密码要求仍由 macOS 管理。</p>
+<h3 id="unlock-reading">解锁后的三秒，随时可以结束</h3>
+<p>解锁模式仅在主显示器呈现已选精华和配画，画面上不加操作提示或倒计时。不操作，约 3 秒自动收起；这三秒内不换诗。鼠标移动不会提前关闭，也不会延长停留。</p>
+<p>点击诗句、篇名或作者，在 App 中阅读全文。点击其他区域、按键或滚动，立即收起诗笺；关闭的那次背景点击不会继续点到底下的窗口。再次锁屏、休眠或离开会话时也会收起，不回来补播。</p>
+</li>
+<li>
+<h3 id="resume">错过点击，也能找回刚才那篇</h3>
+<p>普通打开一瞥，可回看最近实际绘出的作品。解锁诗笺直接在 App 内保存记录；回看系统屏保作品，需要在“阅读与配景”中点击“设置屏保数据访问”，阅读用途说明后决定是否申请系统权限。</p>
+<p>屏保回看与解锁回看使用不同的记录位置。暂不允许屏保数据访问，仍可阅读内置内容、手动预览和回看解锁作品。自动出现诗笺本身不会切换已经打开的阅读页；你主动打开某一篇时，也不会被回看覆盖。</p>
+</li>
+<li>
+<h3 id="artwork">配景与阅读偏好</h3>
+<p>诗词正文和核心配景随版本提供，可离线使用。“阅读与配景”中的“下载扩展配景与配景更新”默认关闭；主动开启后，App 运行时每天检查更新，也可点击“立即检查”。共享配景需要屏保数据访问；屏保本身只读本地图片，不自行联网下载。</p>
+<p>关闭下载会保留已有图片。引号样式也在这一栏调整，可跟随语言或使用方引号。所有模式下，都可以在“展示方式”手动预览诗笺；手动预览与解锁后的三秒展示是不同入口。</p>
+</li>
+<li>
+<h3 id="upgrade">升级与卸载</h3>
+<p>下载安装新版替换主 App，或运行下面的 Homebrew 升级命令。同渠道升级保留已有偏好，不会因为更新就擅自开启解锁展示或扩展下载。</p>
+<div class="brew"><code translate="no">brew upgrade --cask activationenergy/tap/glimpse</code></div>
+<p>如果安装过一瞥屏保，升级主 App 后还须到“安装与帮助”点击“安装／更新屏保”，完成后检查版本并试一次系统预览。Homebrew 不会更新那个单独安装的屏保。</p>
+<p>旧内测版和公开测试版使用不同应用标识，原偏好与屏保记录不会自动迁移。请避免同时运行旧内测版和新版。</p>
+<p>卸载前，先关闭“登录后自动运行一瞥”，到系统设置改用其他屏保，再退出并移除 App 和“一瞥诗词”屏保。不要删除整个系统屏保数据容器，以免影响其他屏保；仅删除 App 不会卸载独立屏保。</p>
 </li>
 </ol>
 </section>
-<section class="questions content">
-<h2>常见问题</h2>
+<section class="questions content" id="troubleshooting">
+<h2>遇到问题时</h2>
 <div>
 <details>
-<summary>需要一直开着 App 吗？</summary>
-<p>不需要。退出 App 后，系统屏保仍可显示诗画。打开 App 可以阅读、调整设置和手动预览。</p>
+<summary>为什么显示“待完成设置”或“解锁展示已暂停”？</summary>
+<p>系统可能仍选着一瞥屏保，或者 App 暂时无法确认系统选项。先到系统设置改用其他屏保，返回后点击“重新检查”。只有“已就绪”才表示解锁模式可以工作。未知或无法读取的系统配置会保持暂停；不要通过关闭系统安全保护来强行启用，可先用系统屏保或手动预览，并反馈本机 macOS 版本。</p>
 </details>
 <details>
-<summary>诗词和图片是否需要联网？</summary>
-<p>内置诗词和配景可以离线使用。新配景下载默认关闭；你开启后，App 运行时每天检查一次。关闭下载不会删除已有图片。</p>
+<summary>已就绪，解锁后为什么仍没出现？</summary>
+<p>先确认一瞥仍在运行，而且在锁屏前已经打开；离开时长需要达到所选的 2、5、10、30 分钟或 1 小时。刚启动、开机登录、仅亮屏和普通激活不会展示。每次解锁最多出现一次，内容没有及时准备好时会跳过；本次离开已经展示过一瞥屏保，也不追加。</p>
 </details>
 <details>
-<summary>为什么需要读取屏保数据？</summary>
-<p>回看最近展示的作品，需要读取系统屏保为一瞥保存的记录。下载配景也需要访问共享位置。App 会先说明用途，再由你决定是否申请系统权限；暂不允许，也能阅读和手动预览。</p>
+<summary>屏保为什么没有出现？</summary>
+<p>确认系统选中的是“一瞥诗词”，且屏保启动早于显示器关闭。显示器先关闭，就可能看不到屏保。先使用系统预览，再等待一次闲置启动；如果平时习惯直接息屏，可以改用解锁模式，无需为了看诗延长亮屏时间。</p>
 </details>
 <details>
-<summary>如何升级或卸载？</summary>
-<p>更新 App 后，请在设置中检查屏保版本，并按提示更新。卸载时，先在系统设置中改用其他屏保，再分别移除 App 和“一瞥诗词”。Homebrew 只管理主 App，另行安装的屏保需要单独移除。不要删除整个系统屏保数据容器。</p>
+<summary>需要一直开着 App 或阅读窗口吗？</summary>
+<p>屏保模式不需要 App 保持运行。解锁模式需要一瞥在后台运行，但可以关闭阅读窗口；退出 App 后暂停。登录后自动运行是独立可选项，受 macOS 实际批准状态控制。</p>
+</details>
+<details>
+<summary>为什么看不到刚才屏保里的作品？</summary>
+<p>检查“阅读与配景”中的屏保数据访问，再点击“检查屏保回看记录”。须让系统屏保实际显示一次；小预览和 App 手动预览不写入屏保回看记录。无记录、权限被拒绝或本版本不含对应作品时，可继续从诗卷查找。解锁作品回看不需要屏保数据访问。</p>
+</details>
+<details>
+<summary>诗词和图片需要联网吗？</summary>
+<p>内置诗词和配景可以离线使用，不需要账号。只有主动开启扩展下载后，App 才会检查新配景与更新；关闭后保留已下载图片。</p>
+</details>
+<details>
+<summary>公开测试版有哪些尚未验证的部分？</summary>
+<p>本版已完成 arm64／x86_64 通用构建、自动回归和本机窗口检查，尚未完成 Developer ID 签名、Apple 公证、完整 Gatekeeper 验证，以及 Intel 和最低 macOS 14 真机验收。真实登录后启动与锁屏认证的系统事件时序仍需继续验证；构建通过不等于这些实机路径已全部通过。</p>
 </details>
 </div>
 </section>
