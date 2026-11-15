@@ -84,26 +84,27 @@
 }
 
 
-.paper .guide ol { grid-template-columns: minmax(0, 1fr); }
+.paper .guide, .paper .questions { width: min(56rem, calc(100% - 96px)); }
+.paper .guide ol { grid-template-columns: minmax(0, 1fr); gap: 40px; }
 .paper .guide li:first-child { grid-column: 1 / -1; }
-.paper .guide .install-summary { max-width: none; }
+.paper .guide h3 { font-size: 20px; font-weight: 600; }
+.paper .guide p, .paper .questions p { max-width: none; font-size: 16px; line-height: 1.9; }
 .paper .install-options { display: grid; grid-template-columns: minmax(0, 1fr); gap: 26px; margin-top: 18px; }
 .paper .install-options > div { min-width: 0; }
 .paper .install-options h4 { margin: 0; font-size: 15px; font-weight: 500; }
-.paper .install-options .brew { margin: 0; width: 100%; max-width: 560px; }
-.paper .install-options code { font-size: 13px; }
+.paper .guide .brew { margin: 18px 0 0; width: 100%; max-width: none; }
+.paper .guide .brew code { font-size: 14px; padding: 14px 18px; }
 @media (max-width: 700px) {
   .paper .guide ol, .paper .install-options { grid-template-columns: minmax(0, 1fr); }
   .paper .install-options { gap: 20px; }
 }
 
 .paper .release-note{max-width:29em;font-size:.78rem;line-height:1.65;color:#626b63;margin-top:1.25rem}
-.paper .display-options{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin:1.5rem 0}
+.paper .display-options{display:grid;grid-template-columns:minmax(0,1fr);gap:32px;margin:1.5rem 0}
 .paper .display-options h4{margin:0 0 .8rem;font-size:1.1rem}
 .paper .display-options p{margin:.65rem 0}
 .paper .settings-location{font-size:.9rem;color:#626b63}
 @media(max-width:700px){.paper .display-options{grid-template-columns:1fr;gap:1rem}}
-.paper .guide-intro{max-width:48em}
 .paper .mode-comparison{overflow-x:auto;margin:28px 0 42px}
 .paper .mode-comparison table{width:100%;border-collapse:collapse;font-size:.92rem;line-height:1.7;text-align:left}
 .paper .mode-comparison caption{text-align:left;font-weight:600;margin-bottom:12px}
@@ -111,5 +112,5 @@
 .paper .mode-comparison th:first-child{min-width:6em}
 .paper .guide li:target,.paper .guide h3:target{scroll-margin-top:100px}
 .paper .settings-location h4{font-size:1rem;margin:1.25rem 0 .6rem}
-.paper .questions details p{max-width:44em;line-height:1.85}
+.paper .questions{grid-template-columns:minmax(0,1fr);gap:28px}
 @media(max-width:700px){.paper .mode-comparison th,.paper .mode-comparison td{padding:10px 7px;font-size:13px}.paper .mode-comparison th:first-child{min-width:5em}}
