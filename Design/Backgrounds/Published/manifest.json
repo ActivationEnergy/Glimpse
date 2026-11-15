@@ -1,5 +1,5 @@
 {
-  "revision": 2,
+  "revision": 3,
   "catalog": {
     "schemaVersion": 1,
     "scenes": [
@@ -32,6 +32,52 @@
             "牛羊"
           ]
         }
+      },
+      {
+        "id": "22-paulownia-shadows",
+        "title": "疏影秋径",
+        "dayAsset": "22-paulownia-shadows-day.webp",
+        "nightAsset": "22-paulownia-shadows-night.webp",
+        "status": "approved",
+        "automaticMatching": {
+          "imagery": [
+            "道路",
+            "风",
+            "霜"
+          ],
+          "keywords": [
+            "秋",
+            "树影",
+            "疏影",
+            "古道",
+            "老树",
+            "枯藤"
+          ],
+          "seasons": [
+            "秋"
+          ],
+          "tones": [
+            "怅惘",
+            "宁静"
+          ],
+          "requiredTerms": [
+            "秋",
+            "树影",
+            "古道",
+            "老树",
+            "枯藤"
+          ]
+        },
+        "reviewedOn": "2026-11-15"
+      },
+      {
+        "id": "weicheng-farewell",
+        "title": "渭城朝雨",
+        "dayAsset": "weicheng-farewell-day.webp",
+        "nightAsset": "weicheng-farewell-day.webp",
+        "fixedAppearance": "day",
+        "status": "approved",
+        "reviewedOn": "2026-11-15"
       }
     ],
     "mappings": [
@@ -46,17 +92,47 @@
           "chile-grassland"
         ],
         "compatible": [],
-        "basis": "阴山脚下的旷野、高草与北方牛羊对应本篇景象；全天使用昼景。",
+        "basis": "配景与本篇意象相合。",
         "status": "approved",
         "reviewedOn": "2026-11-13"
+      },
+      {
+        "poemID": "唐-王维-送元二使安西",
+        "excerpt": [
+          "劝君更尽一杯酒",
+          "西出阳关无故人"
+        ],
+        "revision": 1,
+        "preferred": [
+          "weicheng-farewell"
+        ],
+        "compatible": [],
+        "basis": "配景与本篇意象相合。",
+        "status": "approved",
+        "reviewedOn": "2026-11-15"
       }
     ]
   },
   "assets": [
     {
+      "name": "22-paulownia-shadows-day.webp",
+      "bytes": 385158,
+      "sha256": "918fba17b1f7e4e61c38d93eab43090b39f321889c0fb01e9035d82d5e99a171"
+    },
+    {
+      "name": "22-paulownia-shadows-night.webp",
+      "bytes": 242622,
+      "sha256": "92c9dab37e5640cb4a49a7f45313498bfa3b12564b0361a16db7abb8a6e0bf07"
+    },
+    {
       "name": "chile-grassland-day.webp",
       "bytes": 393034,
       "sha256": "448a6925cdd489ff35e1f105580e8430aa3eba0d9aedd70912227e02407d2d87"
+    },
+    {
+      "name": "weicheng-farewell-day.webp",
+      "bytes": 476818,
+      "sha256": "f95f41a905cad6a46a404e3d3a776e90c50882c4f002d2893ced2cd8a6bfd32f"
     }
   ]
 }
