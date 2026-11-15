@@ -15,6 +15,7 @@
 ```sh
 brew install --cask activationenergy/tap/glimpse
 # 已安装时
+brew update
 brew upgrade --cask activationenergy/tap/glimpse
 ```
 
