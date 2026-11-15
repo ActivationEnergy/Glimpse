@@ -62,7 +62,8 @@
 }
 .paper .long-ci .stanza-break { height: .85em; }
 .paper .reader-story { display: flex; flex-direction: column; align-items: stretch; gap: 28px; }
-.paper .reader-story .story-copy { max-width: 42em; }
+.paper .reader-story .story-copy { max-width: none; }
+.paper .reader-story .story-copy p { max-width: none; }
 .paper .reader-story .painting { width: 100%; }
 .paper .gallery { grid-template-columns: minmax(0, 1fr); gap: 38px; }
 .paper .long-ci .picture-poem { margin: 5%; font-size: clamp(17px, 2.4cqi, 26px); line-height: 1.8; max-width: 90%; }
