@@ -1,0 +1,19 @@
+/* Local names verified on macOS; no font download or embedding. */
+@font-face {
+  font-family: "Glimpse Kai";
+  src: local("STKaitiSC-Regular"), local("Kaiti SC Regular"),
+       local("Kaiti SC"), local("STKaiti"), local("KaiTi");
+  font-style: normal;
+  font-weight: 400;
+}
+:root {
+  --poetry-font: "Glimpse Kai", "Kaiti SC", "STKaitiSC-Regular", "STKaiti", "KaiTi", "楷体";
+  --kai: var(--poetry-font);
+}
+.picture-poem, .picture-poem span, .picture-poem cite,
+.poem, .poem span, .poem cite {
+  font-family: var(--poetry-font) !important;
+  font-style: normal;
+  font-weight: 400;
+  font-synthesis: none;
+}

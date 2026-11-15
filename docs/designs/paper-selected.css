@@ -1,0 +1,99 @@
+/* Selected paper design: explicit widths prevent inline-size containers from
+   shrinking to the poem's intrinsic width in a column flex layout. */
+.paper .painting {
+  width: 100%;
+  min-width: 0;
+  align-self: stretch;
+  justify-self: stretch;
+  grid-template-columns: minmax(0, 1fr);
+}
+.paper .reading {
+  display: flex;
+  flex-direction: column;
+  gap: 76px;
+  width: min(1180px, calc(100% - 96px));
+  padding-block: 76px;
+}
+.paper .story-row {
+  display: grid;
+  grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr);
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+}
+.paper .story-copy { min-width: 0; }
+.paper .painting.pine .picture-poem {
+  color: #243b34;
+  text-shadow: none;
+}
+.paper .story-copy h2 { font-size: clamp(28px, 2.8vw, 36px); }
+.paper .reader-story { grid-template-columns: minmax(0, 1.22fr) minmax(0, .78fr); }
+.paper .reader-story .painting { grid-column: 1; grid-row: 1; }
+.paper .reader-story .story-copy { grid-column: 2; grid-row: 1; }
+.paper .story-row .picture-poem {
+  margin: clamp(20px, 5cqi, 38px);
+  font-size: clamp(18px, 3.6cqi, 25px);
+}
+.paper .collection { width: min(1180px, calc(100% - 96px)); }
+.paper .collection-head { margin-bottom: 32px; }
+.paper .gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 30px;
+  width: 100%;
+}
+.paper .gallery .picture-poem {
+  margin: clamp(20px, 5cqi, 32px);
+  font-size: clamp(17px, 3.6cqi, 24px);
+}
+.paper .picture-poem cite { font-size: clamp(13px, 2.6cqi, 16px); }
+.paper .poem-work { width: 100%; min-width: 0; }
+.paper .poem-preface {
+  font-family: "Songti SC", "STSong", "SimSun", serif;
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--muted);
+  max-width: 48em;
+  margin: 0 0 22px;
+}
+.paper .painting.autumn .picture-poem {
+  font-size: clamp(17px, 2.6cqi, 27px);
+  margin: 5%;
+}
+.paper .long-ci .stanza-break { height: .85em; }
+.paper .reader-story { display: flex; flex-direction: column; align-items: stretch; gap: 28px; }
+.paper .reader-story .story-copy { max-width: 42em; }
+.paper .reader-story .painting { width: 100%; }
+.paper .gallery { grid-template-columns: minmax(0, 1fr); gap: 38px; }
+.paper .long-ci .picture-poem { margin: 5%; font-size: clamp(17px, 2.4cqi, 26px); line-height: 1.8; max-width: 90%; }
+.paper .long-ci .picture-poem span { white-space: normal; word-break: normal; }
+@media (max-width: 1000px) {
+  .paper .reading, .paper .collection { width: calc(100% - 56px); }
+  .paper .story-row, .paper .reader-story { grid-template-columns: minmax(0, 1fr); gap: 25px; }
+  .paper .reader-story .painting, .paper .reader-story .story-copy { grid-column: auto; grid-row: auto; }
+  .paper .gallery { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+  .paper .story-copy { max-width: 38em; }
+}
+@media (max-width: 640px) {
+  .paper .reading, .paper .collection { width: calc(100% - 40px); }
+  .paper .reading { gap: 45px; padding-block: 45px; }
+  .paper .story-row .picture-poem, .paper .gallery .picture-poem {
+    margin: 20px;
+    font-size: clamp(17px, 4.8cqi, 24px);
+  }
+}
+
+/* Keep both installation methods together before screen saver setup. */
+.paper .guide ol { grid-template-columns: minmax(0, 1fr); }
+.paper .guide li:first-child { grid-column: 1 / -1; }
+.paper .guide .install-summary { max-width: none; }
+.paper .install-options { display: grid; grid-template-columns: minmax(0, 1fr); gap: 26px; margin-top: 18px; }
+.paper .install-options > div { min-width: 0; }
+.paper .install-options h4 { margin: 0; font-size: 15px; font-weight: 500; }
+.paper .install-options .brew { margin: 0; width: 100%; max-width: 560px; }
+.paper .install-options code { font-size: 13px; }
+@media (max-width: 700px) {
+  .paper .guide ol, .paper .install-options { grid-template-columns: minmax(0, 1fr); }
+  .paper .install-options { gap: 20px; }
+}

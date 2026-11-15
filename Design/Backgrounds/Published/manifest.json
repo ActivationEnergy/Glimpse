@@ -1,5 +1,5 @@
 {
-  "revision": 3,
+  "revision": 4,
   "catalog": {
     "schemaVersion": 1,
     "scenes": [
@@ -102,7 +102,7 @@
           "劝君更尽一杯酒",
           "西出阳关无故人"
         ],
-        "revision": 1,
+        "revision": 2,
         "preferred": [
           "weicheng-farewell"
         ],
@@ -131,8 +131,8 @@
     },
     {
       "name": "weicheng-farewell-day.webp",
-      "bytes": 476818,
-      "sha256": "f95f41a905cad6a46a404e3d3a776e90c50882c4f002d2893ced2cd8a6bfd32f"
+      "bytes": 382244,
+      "sha256": "65fafb5fbb5bf3395844651b45e6dfdab1e3f50ff505de9a8d871c5ec05959b4"
     }
   ]
 }
