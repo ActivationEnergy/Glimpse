@@ -113,5 +113,12 @@
 .paper .mode-comparison th:first-child{min-width:6em}
 .paper .guide li:target,.paper .guide h3:target{scroll-margin-top:100px}
 .paper .settings-location h4{font-size:1rem;margin:1.25rem 0 .6rem}
+.paper .security-steps{display:grid;gap:28px;margin:24px 0;scroll-margin-top:100px}
+.paper .security-steps figure{min-width:0}
+.paper .security-steps figcaption{font-size:16px;line-height:1.9;margin-bottom:14px}
+.paper .security-steps figcaption strong,.paper .security-steps figcaption span{display:block}
+.paper .security-steps figcaption span{color:var(--muted);margin-top:4px}
+.paper .security-steps img{display:block;width:100%;max-width:944px;height:auto}
+.paper .security-steps .security-dialog{max-width:350px}
 .paper .questions{grid-template-columns:minmax(0,1fr);gap:28px}
 @media(max-width:700px){.paper .mode-comparison th,.paper .mode-comparison td{padding:10px 7px;font-size:13px}.paper .mode-comparison th:first-child{min-width:5em}}

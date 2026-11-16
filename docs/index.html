@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#f7f8f4">
 <link rel="stylesheet" href="designs/v4.css?v=review-1">
 <link rel="stylesheet" href="poetry-type.css?v=kai-local-2">
-<link rel="stylesheet" href="designs/paper-selected.css?v=13">
+<link rel="stylesheet" href="designs/paper-selected.css?v=14">
 </head>
 <body class="paper">
 <a class="skip" href="#main">跳到正文</a>
@@ -168,7 +168,17 @@
 <article>
 <h4>闲置时，作为屏保</h4>
 <p>适合平时会使用屏保的用户。在“展示方式”选中这一项，点击“安装／更新屏保”，完成 macOS 的安装流程。</p>
-<p>安装或更新“一瞥诗词.saver”时，也可能被系统单独阻止。先确认主 App 来自本页提供的下载或 Homebrew 安装方式；若提示 Apple 无法验证是否包含恶意软件，点“完成（Done）”，到“系统设置 → 隐私与安全性 → 安全性”，找到“一瞥诗词.saver”的被阻止记录。如果你决定继续，由你亲自点“仍要打开（Open Anyway）”，按系统提示完成验证并确认打开。</p>
+<p>安装或更新“一瞥诗词.saver”时，也可能出现下面的安全提示。先确认主 App 来自本页提供的下载或 Homebrew 安装方式；如果你决定继续，请按这两步操作。</p>
+<div class="security-steps" id="screensaver-security">
+<figure>
+<figcaption><strong>1. 在拦截提示中点“完成（Done）”</strong><span>看到“无法验证是否包含恶意软件”时，先点下方的 Done，不要点“移到废纸篓（Move to Trash）”。</span></figcaption>
+<img class="security-dialog" src="assets/screensaver-blocked.webp" width="502" height="534" loading="lazy" decoding="async" alt="macOS 提示“一瞥诗词.saver”无法打开，底部有 Move to Trash 和 Done 两个按钮。">
+</figure>
+<figure>
+<figcaption><strong>2. 到“隐私与安全性”点“仍要打开（Open Anyway）”</strong><span>打开“系统设置 → 隐私与安全性 → 安全性”，找到“一瞥诗词.saver”的被阻止记录，点 Open Anyway，再按系统提示验证并确认打开。</span></figcaption>
+<img src="assets/screensaver-open-anyway.webp" width="944" height="356" loading="lazy" decoding="async" alt="系统设置的安全性区域显示“一瞥诗词.saver”被阻止，右侧有 Open Anyway 按钮。">
+</figure>
+</div>
 <p>随后回到屏保安装流程；若流程未继续，再点一次“安装／更新屏保”。主 App 与独立屏保需要分别确认。</p>
 <p>到系统设置选择“一瞥诗词”，先用系统预览检查。再把屏保启动时间设在显示器关闭之前，等待一次真实闲置启动；App 内的“全屏预览诗笺”不能代替系统屏保检查。</p>
 <p>屏保换诗默认每屏 2 分钟，可在“展示方式 → 屏保换诗”中改为 2、5、10、30 分钟；请先同步更新独立屏保，更改在下次屏保启动时生效。多屏首次换诗会错峰。退出 App 后仍可运行，解锁后直接回到工作界面，不再追加解锁诗笺。</p>
