@@ -32,9 +32,9 @@
 <li>无需账号</li>
 <li>免费使用</li>
 </ul>
-<p class="release-note">1.1.0 公开测试版 · 屏保与解锁展示二选一</p>
+<p class="release-note">1.1.1 公开测试版 · 屏保与解锁展示二选一</p>
 <div class="actions">
-<a class="button" href="https://github.com/ActivationEnergy/Glimpse/raw/refs/tags/v1.1.0/Releases/v1.1.0/Glimpse-1.1.0-macOS-universal.dmg">下载 Mac 版</a>
+<a class="button" href="https://github.com/ActivationEnergy/Glimpse/raw/refs/tags/v1.1.1/Releases/v1.1.1/Glimpse-1.1.1-macOS-universal.dmg">下载 Mac 版</a>
 <a href="#guide" class="quiet-link">安装与使用</a>
 </div>
 </div>
@@ -146,11 +146,11 @@
 <li>
 <h3 id="download">安装一瞥</h3>
 <p class="install-summary">免费，适用于 macOS&nbsp;14 及以上。Apple&nbsp;Silicon 与 Intel 通用安装包。以下两种安装方式任选一种。</p>
-<p>当前为 1.1.0 公开测试版，采用临时签名，尚未完成 Apple 公证。安装包和 Homebrew 使用同一版本；Homebrew 不会绕过 macOS 的安全检查。</p>
+<p>当前为 1.1.1 公开测试版，采用临时签名，尚未完成 Apple 公证。安装包和 Homebrew 使用同一版本；Homebrew 不会绕过 macOS 的安全检查。</p>
 <div class="install-options">
 <div>
 <h4>下载安装包</h4>
-<a class="button" href="https://github.com/ActivationEnergy/Glimpse/raw/refs/tags/v1.1.0/Releases/v1.1.0/Glimpse-1.1.0-macOS-universal.dmg">下载 Mac 安装包</a>
+<a class="button" href="https://github.com/ActivationEnergy/Glimpse/raw/refs/tags/v1.1.1/Releases/v1.1.1/Glimpse-1.1.1-macOS-universal.dmg">下载 Mac 安装包</a>
 <p>下载并打开 DMG，将 Glimpse.app 拖入“应用程序”，再从“应用程序”打开。不要一直从安装包内运行。</p>
 </div>
 <div class="brew">
@@ -159,6 +159,7 @@
 <p>在终端运行命令，安装后打开一瞥。Homebrew 只管理主 App；使用屏保时，还要在 App 中另行安装屏保。</p>
 </div>
 </div>
+<p>首次打开主 App 若提示 Apple 无法验证是否包含恶意软件，请先确认使用的是本页提供的下载或 Homebrew 安装方式。如果你决定继续，先点“完成（Done）”，再到“系统设置 → 隐私与安全性 → 安全性”，找到 Glimpse.app 的被阻止记录，亲自点“仍要打开（Open Anyway）”，按系统提示验证并确认打开。</p>
 <p>首次引导可以跳过，先读诗词。之后打开“一瞥 → 设置”（⌘,），左侧有“展示方式”“阅读与配景”“安装与帮助”三栏。</p>
 </li>
 <li>
@@ -167,8 +168,11 @@
 <article>
 <h4>闲置时，作为屏保</h4>
 <p>适合平时会使用屏保的用户。在“展示方式”选中这一项，点击“安装／更新屏保”，完成 macOS 的安装流程。</p>
+<p>安装或更新“一瞥诗词.saver”时，也可能被系统单独阻止。先确认主 App 来自本页提供的下载或 Homebrew 安装方式；若提示 Apple 无法验证是否包含恶意软件，点“完成（Done）”，到“系统设置 → 隐私与安全性 → 安全性”，找到“一瞥诗词.saver”的被阻止记录。如果你决定继续，由你亲自点“仍要打开（Open Anyway）”，按系统提示完成验证并确认打开。</p>
+<p>随后回到屏保安装流程；若流程未继续，再点一次“安装／更新屏保”。主 App 与独立屏保需要分别确认。</p>
 <p>到系统设置选择“一瞥诗词”，先用系统预览检查。再把屏保启动时间设在显示器关闭之前，等待一次真实闲置启动；App 内的“全屏预览诗笺”不能代替系统屏保检查。</p>
-<p>屏保运行时每屏约两分钟换一篇，多屏首次换诗会错峰。退出 App 后仍可运行。解锁后直接回到工作界面，不再追加解锁诗笺。</p>
+<p>屏保换诗默认每屏 2 分钟，可在“展示方式 → 屏保换诗”中改为 2、5、10、30 分钟；请先同步更新独立屏保，更改在下次屏保启动时生效。多屏首次换诗会错峰。退出 App 后仍可运行，解锁后直接回到工作界面，不再追加解锁诗笺。</p>
+<p>换诗间隔需要屏保数据访问，用于读写共享设置。它控制屏保内部多久换一篇；macOS 闲置多久启动屏保仍在系统设置中调整，也不影响解锁诗笺的 3 秒停留。</p>
 </article>
 <article>
 <h4>解锁后，停留片刻</h4>
@@ -198,13 +202,15 @@
 <li>
 <h3 id="artwork">配景与阅读偏好</h3>
 <p>诗词正文和核心配景随版本提供，可离线使用。“阅读与配景”中的“下载扩展配景与配景更新”默认关闭；主动开启后，App 运行时每天检查更新，也可点击“立即检查”。共享配景需要屏保数据访问；屏保本身只读本地图片，不自行联网下载。</p>
-<p>关闭下载会保留已有图片。引号样式也在这一栏调整，可跟随语言或使用方引号。所有模式下，都可以在“展示方式”手动预览诗笺；手动预览与解锁后的三秒展示是不同入口。</p>
+<p>下载完成后无需逐张启用。屏保会在下一次选诗配景时，按匹配规则使用已下载的扩展；请确保独立屏保已同步更新。关闭下载后，已有图片仍可继续使用，但不保证每张都会立即出现。</p>
+<p>引号样式也在这一栏调整，可跟随语言或使用方引号。所有模式下，都可以在“展示方式”手动预览诗笺；手动预览与解锁后的三秒展示是不同入口。</p>
 </li>
 <li>
 <h3 id="upgrade">升级与卸载</h3>
 <p>下载安装新版替换主 App。使用 Homebrew 时，先运行 <code translate="no">brew update</code> 更新 Tap，再执行下面的升级命令。同渠道升级保留已有偏好，不会因为更新就擅自开启解锁展示或扩展下载。</p>
 <div class="brew"><code translate="no">brew upgrade --cask activationenergy/tap/glimpse</code></div>
 <p>如果安装过一瞥屏保，升级主 App 后还须到“安装与帮助”点击“安装／更新屏保”，完成后检查版本并试一次系统预览。Homebrew 不会更新那个单独安装的屏保。</p>
+<p>更新屏保时，macOS 也可能再次要求安全确认。按前面的屏保安装步骤处理被阻止的“一瞥诗词.saver”，再返回完成安装／更新，并检查系统屏保选择。</p>
 <p>旧内测版和公开测试版使用不同应用标识，原偏好与屏保记录不会自动迁移。请避免同时运行旧内测版和新版。</p>
 <p>卸载前，先关闭“登录后自动运行一瞥”，到系统设置改用其他屏保，再退出并移除 App 和“一瞥诗词”屏保。不要删除整个系统屏保数据容器，以免影响其他屏保；仅删除 App 不会卸载独立屏保。</p>
 </li>
@@ -213,6 +219,11 @@
 <section class="questions content" id="troubleshooting">
 <h2>遇到问题时</h2>
 <div>
+<details>
+<summary>提示 Apple 无法验证是否包含恶意软件，怎么办？</summary>
+<p>当前公开测试版尚未完成 Apple 公证。先确认使用的是本页提供的下载或 Homebrew 安装方式，再决定是否继续。点“完成（Done）”后，到“系统设置 → 隐私与安全性 → 安全性”找到对应项目的被阻止记录，亲自点“仍要打开（Open Anyway）”，按系统提示验证并确认打开。主 App 与“一瞥诗词.saver”需要分别确认，屏保更新时也可能再次询问。</p>
+<p>放行屏保后，回到安装流程；若没有继续，再点一次“安装／更新屏保”，完成后到系统设置选择“一瞥诗词”。相关说明见 <a href="https://support.apple.com/zh-cn/102445">Apple 官方指引</a>。</p>
+</details>
 <details>
 <summary>为什么显示“待完成设置”或“解锁展示已暂停”？</summary>
 <p>系统可能仍选着一瞥屏保，或者 App 暂时无法确认系统选项。先到系统设置改用其他屏保，返回后点击“重新检查”。只有“已就绪”才表示解锁模式可以工作。未知或无法读取的系统配置会保持暂停；不要通过关闭系统安全保护来强行启用，可先用系统屏保或手动预览，并反馈本机 macOS 版本。</p>
