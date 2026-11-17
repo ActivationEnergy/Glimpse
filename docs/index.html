@@ -32,9 +32,9 @@
 <li>无需账号</li>
 <li>免费使用</li>
 </ul>
-<p class="release-note">1.1.1 公开测试版 · 屏保与解锁展示二选一</p>
+<p class="release-note">1.2.0 公开测试版 · 屏保新增语义配景与轮换</p>
 <div class="actions">
-<a class="button" href="https://github.com/ActivationEnergy/Glimpse/raw/refs/tags/v1.1.1/Releases/v1.1.1/Glimpse-1.1.1-macOS-universal.dmg">下载 Mac 版</a>
+<a class="button" href="https://github.com/ActivationEnergy/Glimpse/raw/refs/tags/v1.2.0/Releases/v1.2.0/Glimpse-1.2.0-macOS-universal.dmg">下载 Mac 版</a>
 <a href="#guide" class="quiet-link">安装与使用</a>
 </div>
 </div>
@@ -54,6 +54,7 @@
 <div class="story-copy">
 <h2>屏幕闲下来，<br>诗意便有了位置</h2>
 <p>习惯用屏保，就让诗画在闲置时出现。<br>更习惯直接息屏，也可以选择在解锁后看一眼，约 3 秒便收起。两种方式，只选一种。</p>
+<p>系统屏保按诗句的景物与语义选择配景，按契合程度加权轮换，尽量避开近期看过的画面。默认每屏 2 分钟换一篇。</p>
 </div>
 <figure class="painting pine" translate="no">
 <img src="assets/pine-stream-day.webp" alt="日光下的松树、山石与清泉" width="1586" height="992" loading="lazy">
@@ -146,11 +147,11 @@
 <li>
 <h3 id="download">安装一瞥</h3>
 <p class="install-summary">免费，适用于 macOS&nbsp;14 及以上。Apple&nbsp;Silicon 与 Intel 通用安装包。以下两种安装方式任选一种。</p>
-<p>当前为 1.1.1 公开测试版，采用临时签名，尚未完成 Apple 公证。安装包和 Homebrew 使用同一版本；Homebrew 不会绕过 macOS 的安全检查。</p>
+<p>当前为 1.2.0 公开测试版，采用临时签名，尚未完成 Apple 公证。安装包和 Homebrew 使用同一版本；Homebrew 不会绕过 macOS 的安全检查。</p>
 <div class="install-options">
 <div>
 <h4>下载安装包</h4>
-<a class="button" href="https://github.com/ActivationEnergy/Glimpse/raw/refs/tags/v1.1.1/Releases/v1.1.1/Glimpse-1.1.1-macOS-universal.dmg">下载 Mac 安装包</a>
+<a class="button" href="https://github.com/ActivationEnergy/Glimpse/raw/refs/tags/v1.2.0/Releases/v1.2.0/Glimpse-1.2.0-macOS-universal.dmg">下载 Mac 安装包</a>
 <p>下载并打开 DMG，将 Glimpse.app 拖入“应用程序”，再从“应用程序”打开。不要一直从安装包内运行。</p>
 </div>
 <div class="brew">
@@ -211,6 +212,8 @@
 </li>
 <li>
 <h3 id="artwork">配景与阅读偏好</h3>
+<p>1.2.0 本地提供 54 组画作，主动下载两组扩展后共可用 56 组。新的语义配景与加权轮换用于系统屏保；App 内手动预览和解锁诗笺仍沿用原有配景逻辑。</p>
+<p>可用画面因作品而异，不是每篇都有多张候选。本次分析中有 65 篇暂未找到合适画面，使用中性底保留文字阅读。</p>
 <p>诗词正文和核心配景随版本提供，可离线使用。“阅读与配景”中的“下载扩展配景与配景更新”默认关闭；主动开启后，App 运行时每天检查更新，也可点击“立即检查”。共享配景需要屏保数据访问；屏保本身只读本地图片，不自行联网下载。</p>
 <p>下载完成后无需逐张启用。屏保会在下一次选诗配景时，按匹配规则使用已下载的扩展；请确保独立屏保已同步更新。关闭下载后，已有图片仍可继续使用，但不保证每张都会立即出现。</p>
 <p>引号样式也在这一栏调整，可跟随语言或使用方引号。所有模式下，都可以在“展示方式”手动预览诗笺；手动预览与解锁后的三秒展示是不同入口。</p>
