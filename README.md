@@ -4,9 +4,9 @@
 
 [产品介绍、安装与完整设置指引](https://activationenergy.github.io/Glimpse/#guide)
 
-## 1.2.0 公开测试版
+## 1.2.1 公开测试版
 
-[下载 Mac 通用安装包](https://github.com/ActivationEnergy/Glimpse/raw/refs/tags/v1.2.0/Releases/v1.2.0/Glimpse-1.2.0-macOS-universal.dmg) · [校验值](Releases/v1.2.0/SHA256SUMS)
+[下载 Mac 通用安装包](https://github.com/ActivationEnergy/Glimpse/raw/refs/tags/v1.2.1/Releases/v1.2.1/Glimpse-1.2.1-macOS-universal.dmg) · [校验值](Releases/v1.2.1/SHA256SUMS)
 
 适用于 macOS 14 及以上，Apple Silicon／Intel 通用。包含 1,105 篇目录作品、54 组离线配景；两组扩展默认不下载。
 
@@ -29,11 +29,13 @@ brew upgrade --cask activationenergy/tap/glimpse
 
 macOS 14／15 的屏保入口在“系统设置 → 屏幕保护程序”；26 及以后在“系统设置 → 墙纸 → 屏幕保护程序”，也可搜索。入口以系统版本为准。
 
-详细步骤、权限解释、升级卸载及排错见[网页使用指引](https://activationenergy.github.io/Glimpse/#guide)与[包内安装说明](Releases/v1.2.0/安装说明.txt)。
+详细步骤、权限解释、升级卸载及排错见[网页使用指引](https://activationenergy.github.io/Glimpse/#guide)与[包内安装说明](Releases/v1.2.1/安装说明.txt)。
 
 ## 本版变化与测试边界
 
-1.2.0 新增按诗词语义选图、加权轮换和近期配景避重。可用其他合适图片时，多屏尽量选择不同配景；图片不足或读取失败时允许退让。默认每屏 2 分钟同步换诗换图，可选 2／5／10／30 分钟。本地 54 组配景，主动下载两组扩展后共 56 组；暂无合适具体画面的作品采用中性底。当前发行的 1105 篇均获准进入屏保池，完整内容可主动全屏预览。修正《忆秦娥》分行、《陌上桑》过早节选、题注测量和古文段落。升级 App 后须另行安装／更新屏保。
+1.2.1 修复覆盖安装屏保后“重新检查”仍显示旧版本的问题，并补足屏保目录的只读检查权限。安装器提示已安装时，选择“Replace（替换）”即可更新；完成后回到 App 检查磁盘版本，再到系统设置预览。如果预览仍为黑屏，macOS 可能仍载入旧屏保，请注销并重新登录后再预览。Homebrew 只更新主 App，独立屏保仍需在“安装与帮助”中另行更新。
+
+保留 1.2.0 的语义配景、加权轮换和近期避重：默认每屏 2 分钟同步换诗换图，可选 2／5／10／30 分钟；本地 54 组配景，两组可选扩展默认不下载，暂无合适画面的作品使用中性底。1,105 篇目录作品均获准进入屏保池，完整内容可主动全屏预览。
 
 本版采用临时签名，尚未完成 Apple 公证、完整 Gatekeeper 验证、Intel 与最低 macOS 14 真机验收。真实登录后启动与锁屏认证的系统事件时序仍需继续验证。请按系统安全提示自行决定是否允许运行，无需关闭全局安全保护。
 

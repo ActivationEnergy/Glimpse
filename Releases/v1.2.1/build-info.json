@@ -1,0 +1,15 @@
+{
+  "version": "1.2.1",
+  "build": "2026111703",
+  "channel": "public-test",
+  "catalogEntries": 1105,
+  "coreBackgroundGroups": 54,
+  "extensionGroups": 2,
+  "architectures": [
+    "arm64",
+    "x86_64"
+  ],
+  "minimumMacOS": "14.0",
+  "signature": "ad-hoc",
+  "notarized": false
+}

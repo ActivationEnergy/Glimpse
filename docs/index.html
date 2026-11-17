@@ -32,9 +32,9 @@
 <li>无需账号</li>
 <li>免费使用</li>
 </ul>
-<p class="release-note">1.2.0 公开测试版 · 屏保新增语义配景与轮换</p>
+<p class="release-note">1.2.1 公开测试版 · 修复屏保更新后的版本检测</p>
 <div class="actions">
-<a class="button" href="https://github.com/ActivationEnergy/Glimpse/raw/refs/tags/v1.2.0/Releases/v1.2.0/Glimpse-1.2.0-macOS-universal.dmg">下载 Mac 版</a>
+<a class="button" href="https://github.com/ActivationEnergy/Glimpse/raw/refs/tags/v1.2.1/Releases/v1.2.1/Glimpse-1.2.1-macOS-universal.dmg">下载 Mac 版</a>
 <a href="#guide" class="quiet-link">安装与使用</a>
 </div>
 </div>
@@ -147,11 +147,11 @@
 <li>
 <h3 id="download">安装一瞥</h3>
 <p class="install-summary">免费，适用于 macOS&nbsp;14 及以上。Apple&nbsp;Silicon 与 Intel 通用安装包。以下两种安装方式任选一种。</p>
-<p>当前为 1.2.0 公开测试版，采用临时签名，尚未完成 Apple 公证。安装包和 Homebrew 使用同一版本；Homebrew 不会绕过 macOS 的安全检查。</p>
+<p>当前为 1.2.1 公开测试版，采用临时签名，尚未完成 Apple 公证。安装包和 Homebrew 使用同一版本；Homebrew 不会绕过 macOS 的安全检查。</p>
 <div class="install-options">
 <div>
 <h4>下载安装包</h4>
-<a class="button" href="https://github.com/ActivationEnergy/Glimpse/raw/refs/tags/v1.2.0/Releases/v1.2.0/Glimpse-1.2.0-macOS-universal.dmg">下载 Mac 安装包</a>
+<a class="button" href="https://github.com/ActivationEnergy/Glimpse/raw/refs/tags/v1.2.1/Releases/v1.2.1/Glimpse-1.2.1-macOS-universal.dmg">下载 Mac 安装包</a>
 <p>下载并打开 DMG，将 Glimpse.app 拖入“应用程序”，再从“应用程序”打开。不要一直从安装包内运行。</p>
 </div>
 <div class="brew">
@@ -223,6 +223,7 @@
 <p>下载安装新版替换主 App。使用 Homebrew 时，先运行 <code translate="no">brew update</code> 更新 Tap，再执行下面的升级命令。同渠道升级保留已有偏好，不会因为更新就擅自开启解锁展示或扩展下载。</p>
 <div class="brew"><code translate="no">brew upgrade --cask activationenergy/tap/glimpse</code></div>
 <p>如果安装过一瞥屏保，升级主 App 后还须到“安装与帮助”点击“安装／更新屏保”，完成后检查版本并试一次系统预览。Homebrew 不会更新那个单独安装的屏保。</p>
+<p>安装器提示已安装时，选择“Replace（替换）”即可更新已有副本。完成后返回 App 点击“重新检查”，读取磁盘上的当前版本。若系统预览仍为黑屏，macOS 可能仍载入旧屏保，请注销并重新登录后再预览。</p>
 <p>更新屏保时，macOS 也可能再次要求安全确认。按前面的屏保安装步骤处理被阻止的“一瞥诗词.saver”，再返回完成安装／更新，并检查系统屏保选择。</p>
 <p>旧内测版和公开测试版使用不同应用标识，原偏好与屏保记录不会自动迁移。请避免同时运行旧内测版和新版。</p>
 <p>卸载前，先关闭“登录后自动运行一瞥”，到系统设置改用其他屏保，再退出并移除 App 和“一瞥诗词”屏保。不要删除整个系统屏保数据容器，以免影响其他屏保；仅删除 App 不会卸载独立屏保。</p>
